@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M & T Consultoría - Mind & Tech | Transformación Digital y Mentalidad Estratégica</title>
+    <meta name="description" content="Consultoría especializada en transformación digital, desarrollo de equipos de alto rendimiento e integración de IA. Más de 2 años de experiencia combinando mentalidad estratégica y tecnología.">
+    <meta name="keywords" content="consultoría digital, transformación digital, IA, equipos alto rendimiento, mentalidad estratégica, tecnología, innovación">
+    <meta name="author" content="M & T Consultoría">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-teal: #1B4D5C;
+            --primary-gold: #D4AF37;
+            --dark-teal: #0F2A35;
+            --light-teal: #2D5A6B;
+            --accent-gold: #F4E4A6;
+            --text-dark: #1a1a1a;
+            --text-light: #ffffff;
+            --bg-light: #ffffff;
+            --bg-section: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--light-teal) 100%);
+        }
+
+        .gradient-gold {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--accent-gold) 100%);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(27, 77, 92, 0.1);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--light-teal) 100%);
+            color: var(--text-light);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(27, 77, 92, 0.3);
+            color: var(--text-light);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-teal);
+            padding: 12px 30px;
+            border: 2px solid var(--primary-teal);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-teal);
+            color: var(--text-light);
+            transform: translateY(-2px);
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-section) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="circuit" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="%231B4D5C" opacity="0.1"/><line x1="25" y1="0" x2="25" y2="50" stroke="%231B4D5C" stroke-width="0.5" opacity="0.1"/><line x1="0" y1="25" x2="50" y2="25" stroke="%231B4D5C" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="1000" height="1000" fill="url(%23circuit)"/></svg>') no-repeat;
+            background-size: cover;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            border-radius: 20px;
+            padding: 40px 30px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(27, 77, 92, 0.1);
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(27, 77, 92, 0.15);
+        }
+
+        .service-icon {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--light-teal) 100%);
+            color: var(--text-light);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .stats-counter {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid var(--primary-gold);
+            object-fit: cover;
+            box-shadow: 0 20px 40px rgba(27, 77, 92, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px rgba(27, 77, 92, 0.2);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-gold);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 50px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            background: var(--primary-gold);
+            border-radius: 50%;
+            border: 3px solid var(--bg-light);
+        }
+
+        .contact-form {
+            background: var(--bg-light);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(27, 77, 92, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid rgba(27, 77, 92, 0.1);
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: var(--bg-light);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-teal);
+            box-shadow: 0 0 0 3px rgba(27, 77, 92, 0.1);
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(27, 77, 92, 0.1);
+        }
+
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-teal);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-teal);
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .service-category {
+            margin-bottom: 60px;
+        }
+
+        .service-category-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-teal);
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .service-category-objective {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(27, 77, 92, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        .service-item {
+            background: var(--bg-light);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(27, 77, 92, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(27, 77, 92, 0.1);
+        }
+
+        .service-item-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-teal);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-item-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .quote-section {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--dark-teal) 100%);
+            color: var(--text-light);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .quote-author {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .bonus-section {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--accent-gold) 100%);
+            color: var(--text-dark);
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+
+        .bonus-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .format-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .format-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 60px 0;
+            }
+            
+            .hero-section {
+                min-height: auto;
+                padding: 100px 0 60px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .contact-form {
+                padding: 30px;
+            }
+
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-gradient font-display">M & T Consultoría</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#experiencia" class="nav-link">Experiencia</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-gray-900" id="mobile-menu-button">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="hero-content">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="animate-fade-in">
+                        <h1 class="text-5xl md:text-6xl font-bold mb-6 font-display">
+                            <span class="text-gradient">Mind & Tech</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl mb-6 text-gray-700">
+                            Transformación Digital y Mentalidad Estratégica
+                        </p>
+                        <p class="text-lg mb-8 text-gray-600 leading-relaxed">
+                            Cultivo mentalidad y tecnología como fuentes clave de innovación y adaptación para transformar negocios y acelerar el crecimiento empresarial.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#servicios" class="btn-primary text-center">
+                                <i class="fas fa-rocket mr-2"></i>
+                                Conoce Mis Servicios
+                            </a>
+                            <a href="#sobre-mi" class="btn-secondary text-center">
+                                <i class="fas fa-user mr-2"></i>
+                                Sobre Mí
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block">
+                        <div class="relative">
+                            <div class="glass-card p-8 text-center">
+                                <div class="stats-counter mb-2">+2</div>
+                                <p class="text-gray-600">Años de Experiencia</p>
+                                <div class="mt-6">
+                                    <div class="stats-counter text-3xl mb-2">+12</div>
+                                    <p class="text-gray-600">Proyectos Gestionados</p>
+                                </div>
+                                <div class="mt-6">
+                                    <div class="stats-counter text-3xl mb-2">1</div>
+                                    <p class="text-gray-600">Premio Nacional</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-mi" class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Sobre Mí</h2>
+                <p class="section-subtitle">
+                    Combinando experiencia técnica con visión estratégica para impulsar la transformación digital
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <img src="assets/images/Perfil.jpg" alt="Perfil profesional" class="profile-image mx-auto lg:mx-0 mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Mi Enfoque</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="service-icon w-12 h-12 text-sm mr-4 flex-shrink-0">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">Mentalidad Estratégica</h4>
+                                <p class="text-gray-600">Fortalecimiento de la mentalidad estratégica y cultura de ejecución para equipos de alto rendimiento.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="service-icon w-12 h-12 text-sm mr-4 flex-shrink-0">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">Implementación Tecnológica</h4>
+                                <p class="text-gray-600">Integración efectiva de tecnología con impacto real, empoderando ciudadanos digitales capaces de crear soluciones.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="service-icon w-12 h-12 text-sm mr-4 flex-shrink-0">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">Equilibrio Integral</h4>
+                                <p class="text-gray-600">Integración de mentalidad y tecnología sin perder el equilibrio emocional ni la claridad personal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900">Mi Trayectoria</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-lg mb-2">Gerencia de Tecnología y Proyectos</h4>
+                            <p class="text-gray-600">Gestión de más de 12 proyectos simultáneos en startup, desarrollo de equipos junior-senior y estrategias de escalamiento.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-lg mb-2">Premio Nacional de Innovación</h4>
+                            <p class="text-gray-600">Ganador del Premio Nacional de Innovación del Grupo Bolívar (2023), reconocimiento a la excelencia en innovación tecnológica.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="font-bold text-lg mb-2">Especialización en IA</h4>
+                            <p class="text-gray-600">Integración de tecnologías desde no-code hasta full-code, con IA en flujos de trabajo para resultados superiores al promedio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Mis Servicios</h2>
+                <p class="section-subtitle">
+                    Soluciones integrales para la transformación digital y el desarrollo de equipos de alto rendimiento
+                </p>
+            </div>
+
+            <!-- MINDSET Category -->
+            <div class="service-category">
+                <h3 class="service-category-title">
+                    <i class="fas fa-brain text-3xl"></i>
+                    1. MINDSET (MENTALIDAD)
+                </h3>
+                <div class="service-category-objective">
+                    <strong>Objetivo:</strong> Desarrollar líderes y equipos con mentalidad de innovación, ejecución estratégica y equilibrio emocional.
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="service-item">
+                        <h4 class="service-item-title">
+                            <i class="fas fa-trophy"></i>
+                            Talleres de Mentalidad de Alto Rendimiento
+                        </h4>
+                        <p class="service-item-description">
+                            Formación intensiva para desarrollar foco, propósito, resiliencia, gestión del tiempo y toma de decisiones conscientes.
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <h4 class="service-item-title">
+                            <i class="fas fa-rocket"></i>
+                            Bootcamp: Mentalidad Digital para Ciudadanos del Futuro
+                        </h4>
+                        <p class="service-item-description">
+                            Ideal para equipos que necesitan comprender el cambio tecnológico sin sentirse rebasados. Se trabajan temas como adaptabilidad, desaprendizaje, liderazgo ágil.
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <h4 class="service-item-title">
+                            <i class="fas fa-user-tie"></i>
+                            Coaching Personalizado (one-to-one)
+                        </h4>
+                        <p class="service-item-description">
+                            Acompañamiento estratégico para líderes que quieren crecer en enfoque, influencia y claridad personal sin sacrificar su bienestar.
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <h4 class="service-item-title">
+                            <i class="fas fa-search"></i>
+                            Diagnóstico de Cultura y Mindset en Equipos
+                        </h4>
+                        <p class="service-item-description">
+                            Herramientas para detectar bloqueos culturales, falta de mentalidad de crecimiento o resistencia a la innovación.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TECH Category -->
+            <div class="service-category">
+                <h3 class="service-category-title">
+                    <i class="fas fa-microchip text-3xl"></i>
+                    2. TECH (TECNOLOGÍA APLICADA)
+                </h3>
+                <div class="service-category-objective">
+                    <strong>Objetivo:</strong> Integrar herramientas tecnológicas avanzadas, especialmente IA generativa, de manera práctica y personalizada, para aumentar la productividad, mejorar la toma de decisiones y acelerar el trabajo estratégico.
+                </div>
+                
+                <div class="mb-8">
+                    <h4 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i class="fas fa-robot"></i>
+                        🧠 Implementación de IA en flujos de trabajo reales
+                    </h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="service-item">
+                            <h5 class="service-item-title">Integración de IA</h5>
+                            <p class="service-item-description">
+                                Integración práctica de herramientas como Gemini (Google AI), ChatGPT, Notion AI, Copilot para equipos de ventas, soporte, análisis, gestión de proyectos, innovación.
+                            </p>
+                        </div>
+                        <div class="service-item">
+                            <h5 class="service-item-title">Agentes Inteligentes</h5>
+                            <p class="service-item-description">
+                                Creación de agentes personalizados que generan informes, visualizan datos, proponen mejoras, redactan correos, documentos y minutas según contexto empresarial.
+                            </p>
+                        </div>
+                        <div class="service-item">
+                            <h5 class="service-item-title">Automatización Cognitiva</h5>
+                            <p class="service-item-description">
+                                Automatización de tareas cognitivas: resumen de videos largos, transcripción de audios, extracción de ideas clave y organización de contenido.
+                            </p>
+                        </div>
+                        <div class="service-item">
+                            <h5 class="service-item-title">Asistentes Estratégicos</h5>
+                            <p class="service-item-description">
+                                Asistentes para ideación, planeación estratégica o lluvia de ideas guiadas basados en prompts inteligentes según tu industria.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h4 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i class="fas fa-chart-line"></i>
+                        📊 Visualización, análisis y prototipado
+                    </h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="service-item">
+                            <h5 class="service-item-title">Gráficos Interactivos</h5>
+                            <p class="service-item-description">
+                                Generación de gráficos interactivos y visualizaciones explicativas a partir de datos sin necesidad de Excel o BI avanzado.
+                            </p>
+                        </div>
+                        <div class="service-item">
+                            <h5 class="service-item-title">Simuladores</h5>
+                            <p class="service-item-description">
+                                Desarrollo de simuladores en pequeña escala (operativos, logísticos o financieros) para validar ideas antes de escalar.
+                            </p>
+                        </div>
+                        <div class="service-item">
+                            <h5 class="service-item-title">Dashboards Rápidos</h5>
+                            <p class="service-item-description">
+                                Dashboards rápidos para indicadores clave usando herramientas low-code + IA.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h4 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i class="fas fa-search"></i>
+                        🔎 Investigación y documentación acelerada
+                    </h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="service-item">
+                            <h5 class="service-item-title">Benchmarking Automático</h5>
+                            <p class="service-item-description">
+                                Creación de procesos de benchmarking automático y comparación de competidores o soluciones tecnológicas.
+                            </p>
+                        </div>
+                        <div class="service-item">
+                            <h5 class="service-item-title">Síntesis Inteligente</h5>
+                            <p class="service-item-description">
+                                Agentes de IA para sintetizar múltiples fuentes (PDF, Excel, enlaces web, archivos internos) en reportes estructurados.
+                            </p>
+                        </div>
+                        <div class="service-item">
+                            <h5 class="service-item-title">Búsquedas Ágiles</h5>
+                            <p class="service-item-description">
+                                Apoyo en búsquedas ágiles de normativas, tendencias o buenas prácticas del sector, filtradas por industria y madurez.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h4 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i class="fas fa-tools"></i>
+                        🛠️ Capacitación y transferencia de conocimiento
+                    </h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="service-item">
+                            <h5 class="service-item-title">Entrenamiento Estratégico</h5>
+                            <p class="service-item-description">
+                                Entrenamiento al equipo en el uso estratégico de IA según su rol y necesidad. Desde básico hasta avanzado.
+                            </p>
+                        </div>
+                        <div class="service-item">
+                            <h5 class="service-item-title">Prompt Books</h5>
+                            <p class="service-item-description">
+                                Diseño de "Prompt Books" personalizados por cargo: ventas, gerencia, analistas, marketing, etc.
+                            </p>
+                        </div>
+                        <div class="service-item">
+                            <h5 class="service-item-title">Asesoría Técnica</h5>
+                            <p class="service-item-description">
+                                Asesoría para elección de herramientas, configuración inicial y creación de flujos automatizados internos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item bg-gradient-to-r from-blue-50 to-gold-50 border-2 border-gold-200">
+                    <h5 class="service-item-title text-lg">
+                        <i class="fas fa-heart"></i>
+                        ➕ OPCIONAL: Módulo "Tech Without Overwhelm"
+                    </h5>
+                    <p class="service-item-description">
+                        Un acompañamiento especialmente pensado para quienes quieren aprovechar la tecnología sin sentirse abrumados, ideal para directivos, fundadores, profesionales senior o perfiles administrativos. Aquí se aterriza la tecnología al lenguaje humano, con foco en resultados, sin tecnicismos innecesarios.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PROJECT & TEAM PERFORMANCE Category -->
+            <div class="service-category">
+                <h3 class="service-category-title">
+                    <i class="fas fa-users text-3xl"></i>
+                    3. PROJECT & TEAM PERFORMANCE
+                </h3>
+                <div class="service-category-objective">
+                    <strong>Objetivo:</strong> Alinear equipos, proyectos y estrategia a través de metodologías ágiles, cultura de innovación y resultados visibles.
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="service-item">
+                        <h4 class="service-item-title">
+                            <i class="fas fa-project-diagram"></i>
+                            Dirección y acompañamiento de proyectos de transformación digital
+                        </h4>
+                        <p class="service-item-description">
+                            Desde la estructuración hasta el seguimiento. Incluye roadmap, gestión de equipo, cumplimiento de entregables y métricas de impacto.
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <h4 class="service-item-title">
+                            <i class="fas fa-users-cog"></i>
+                            Diseño de Equipos de Alto Rendimiento Digital
+                        </h4>
+                        <p class="service-item-description">
+                            Reclutamiento estratégico, definición de perfiles (junior-senior), plan de formación, cultura colaborativa y accountability.
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <h4 class="service-item-title">
+                            <i class="fas fa-lightbulb"></i>
+                            Consultoría en Innovación para Startups y PYMEs
+                        </h4>
+                        <p class="service-item-description">
+                            Cómo escalar sin perder agilidad. Diseño de MVP, validación de soluciones, conexión con usuarios reales, procesos de mejora continua.
+                        </p>
+                    </div>
+                    <div class="service-item">
+                        <h4 class="service-item-title">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            Conferencias y talleres In Company (a medida)
+                        </h4>
+                        <p class="service-item-description">
+                            Desde talleres tipo "Innovation Day" hasta charlas para juntas directivas sobre visión tecnológica y cultura organizacional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bonus Section -->
+            <div class="bonus-section">
+                <h3 class="bonus-title">
+                    <i class="fas fa-gift"></i>
+                    📦 BONUS: FORMATOS DE ENTREGA FLEXIBLES
+                </h3>
+                <div class="format-list">
+                    <div class="format-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Workshops intensivos (presencial u online)</span>
+                    </div>
+                    <div class="format-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Procesos 1 a 3 meses (acompañamiento ejecutivo)</span>
+                    </div>
+                    <div class="format-item">
+                        <i class="fas fa-bolt"></i>
+                        <span>Mentorías express por horas o sprint</span>
+                    </div>
+                    <div class="format-item">
+                        <i class="fas fa-layer-group"></i>
+                        <span>Programas híbridos (formación + implementación)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <blockquote class="quote-text">
+                "Los pequeños cambios constantes generan resultados extraordinarios. Como dice James Clear: 'No te elevas al nivel de tus objetivos, caes al nivel de tus sistemas.'"
+            </blockquote>
+            <cite class="quote-author">— Mi filosofía de trabajo</cite>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experiencia" class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Experiencia y Logros</h2>
+                <p class="section-subtitle">
+                    Más de 2 años transformando negocios a través de la integración de mentalidad y tecnología
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-8 text-center bg-white">
+                    <div class="stats-counter">+12</div>
+                    <h3 class="text-xl font-bold mb-2">Proyectos Simultáneos</h3>
+                    <p class="text-gray-600">Gestión exitosa de múltiples proyectos en entorno startup de alta velocidad</p>
+                </div>
+                <div class="glass-card p-8 text-center bg-white">
+                    <div class="stats-counter">1</div>
+                    <h3 class="text-xl font-bold mb-2">Premio Nacional</h3>
+                    <p class="text-gray-600">Premio Nacional de Innovación del Grupo Bolívar (2023)</p>
+                </div>
+                <div class="glass-card p-8 text-center bg-white">
+                    <div class="stats-counter">+2</div>
+                    <h3 class="text-xl font-bold mb-2">Años de Experiencia</h3>
+                    <p class="text-gray-600">Experiencia consolidada en gerencia de tecnología y proyectos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">¿Listo para Transformar tu Negocio?</h2>
+                <p class="section-subtitle">
+                    Conversemos sobre cómo integrar mentalidad y tecnología para acelerar tu crecimiento
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Trabajemos Juntos</h3>
+                    <p class="text-gray-600 mb-8">
+                        ¿Te gustaría saber más sobre cómo podemos trabajar juntos para transformar tu negocio? 
+                        Contáctame para iniciar una conversación sobre tus objetivos y desafíos.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="service-icon w-12 h-12 text-sm mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p class="text-gray-600">contacto@mtconsultoria.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="service-icon w-12 h-12 text-sm mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Teléfono</h4>
+                                <p class="text-gray-600">+57 (XXX) XXX-XXXX</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="service-icon w-12 h-12 text-sm mr-4">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">LinkedIn</h4>
+                                <p class="text-gray-600">Conecta conmigo en LinkedIn</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form" action="https://formspree.io/f/xpznvold" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nombre</label>
+                            <input type="text" id="name" name="name" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Empresa</label>
+                            <input type="text" id="company" name="company" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" required class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 font-display">M & T Consultoría</h3>
+                    <p class="text-gray-300">
+                        Transformando negocios a través de la integración de mentalidad estratégica y tecnología avanzada.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Mindset (Mentalidad)</li>
+                        <li>Tech (Tecnología Aplicada)</li>
+                        <li>Project & Team Performance</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contacto</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>contacto@mtconsultoria.com</p>
+                        <p>+57 (XXX) XXX-XXXX</p>
+                        <div class="flex space-x-4 mt-4">
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 M & T Consultoría. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', function() {
+                console.log('Mobile menu clicked');
+            });
+        }
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>
