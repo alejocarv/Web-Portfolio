@@ -124,7 +124,6 @@
                 font-size: 24px;
             }
         }
-
     </style>
 </head>
 <body class="bg-gray-50">
@@ -279,53 +278,71 @@
             <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-12" id="service-tabs">
                 <button class="btn tab-btn active" data-tab="mindset"><i class="fas fa-brain mr-2"></i> MENTALIDAD</button>
                 <button class="btn tab-btn" data-tab="tech"><i class="fas fa-microchip mr-2"></i> TECNOLOGÍA</button>
-                <button class="btn tab-btn" data-tab="performance"><i class="fas fa-users mr-2"></i>PROYECTOS</button>
             </div>
 
             <div id="service-content">
+                <!-- Panel MENTALIDAD -->
                 <div id="mindset" class="service-panel animate-fade-in">
-                     <h3 class="service-category-title justify-center text-center">1. MENTALIDAD (MINDSET)</h3>
-                     <div class="service-category-objective max-w-4xl mx-auto"><strong>Objetivo:</strong> Desarrollar líderes y equipos con mentalidad de innovación, ejecución estratégica y equilibrio emocional.</div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                        <div class="service-item"><h4 class="service-item-title"><i class="fas fa-trophy text-primary-gold"></i>Talleres de Alto Rendimiento</h4><p class="service-item-description">Formación intensiva para desarrollar foco, propósito, resiliencia, gestión del tiempo y toma de decisiones conscientes.</p></div>
-                        <div class="service-item"><h4 class="service-item-title"><i class="fas fa-rocket text-primary-gold"></i>Taller Intensivo de Mentalidad Digital</h4><p class="service-item-description">Ideal para equipos que necesitan comprender el cambio tecnológico sin sentirse rebasados. Se trabajan temas como adaptabilidad y liderazgo ágil.</p></div>
-                        <div class="service-item"><h4 class="service-item-title"><i class="fas fa-user-tie text-primary-gold"></i>Coaching Personalizado</h4><p class="service-item-description">Acompañamiento estratégico para líderes que quieren crecer en enfoque, influencia y claridad personal sin sacrificar su bienestar.</p></div>
-                        <div class="service-item"><h4 class="service-item-title"><i class="fas fa-search text-primary-gold"></i>Diagnóstico de Cultura y Mentalidad</h4><p class="service-item-description">Herramientas para detectar bloqueos culturales, falta de mentalidad de crecimiento o resistencia a la innovación en equipos.</p></div>
+                    <h3 class="service-category-title justify-center text-center">MENTALIDAD</h3>
+                    <div class="max-w-4xl mx-auto text-center">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">Empoderamos a profesionales y empresas en el desarrollo de <strong>ciudadanos digitales</strong>, personas capaces de identificar oportunidades de digitalización u optimización de procesos operativos en su entorno.</p>
+                        <p class="text-gray-600">A través del fortalecimiento de la <strong>habilidad digital estratégica</strong>, ayudamos a que cada persona utilice la tecnología de forma consciente y efectiva, generando un impacto directo en indicadores como:</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary-teal">
+                            <h4 class="font-bold text-xl mb-4 flex items-center text-primary-teal"><i class="fas fa-chart-line mr-3 fa-fw"></i>Eficiencia Operativa</h4>
+                            <ul class="space-y-3 text-gray-600 list-disc list-inside">
+                                <li><strong>Tiempo por tarea:</strong> Reducción en la ejecución.</li>
+                                <li><strong>Productividad de equipo:</strong> Aumento en tareas completadas.</li>
+                                <li><strong>Tiempo de respuesta:</strong> Mejora en atención al cliente.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary-gold">
+                            <h4 class="font-bold text-xl mb-4 flex items-center text-primary-teal"><i class="fas fa-dollar-sign mr-3 fa-fw"></i>Financieros</h4>
+                            <ul class="space-y-3 text-gray-600 list-disc list-inside">
+                                <li><strong>Reducción de costos:</strong> Menos gastos en tareas manuales.</li>
+                                <li><strong>ROI tecnológico:</strong> Retorno de la inversión de herramientas.</li>
+                                <li><strong>Ingresos por eficiencia:</strong> Mejoras en el ciclo comercial.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-light-teal">
+                            <h4 class="font-bold text-xl mb-4 flex items-center text-primary-teal"><i class="fas fa-users-cog mr-3 fa-fw"></i>Organización y Cultura</h4>
+                            <ul class="space-y-3 text-gray-600 list-disc list-inside">
+                                <li><strong>Adopción tecnológica:</strong> % de colaboradores usando herramientas.</li>
+                                <li><strong>Índice de mejora:</strong> Nº de propuestas generadas.</li>
+                                <li><strong>Autonomía digital:</strong> Capacidad del equipo para resolver retos.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Panel TECNOLOGÍA -->
                 <div id="tech" class="service-panel hidden animate-fade-in">
-                    <h3 class="service-category-title justify-center text-center">2. TECNOLOGÍA APLICADA (TECH)</h3>
-                    <div class="service-category-objective max-w-4xl mx-auto"><strong>Objetivo:</strong> Integrar herramientas tecnológicas avanzadas, especialmente IA generativa, de manera práctica y personalizada, para aumentar la productividad y acelerar el trabajo estratégico.</div>
-                    <div class="space-y-12 mt-8">
-                        <div>
-                            <h4 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-robot text-primary-gold"></i>Implementación de IA en flujos de trabajo</h4>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="service-item"><h5 class="service-item-title">Integración de Inteligencia Artificial</h5><p class="service-item-description">Uso práctico de Gemini, ChatGPT, Notion AI, Copilot para ventas, soporte, análisis, gestión de proyectos e innovación.</p></div>
-                                <div class="service-item"><h5 class="service-item-title">Creación de Agentes Inteligentes</h5><p class="service-item-description">Desarrollo de agentes personalizados que generan informes, visualizan datos, proponen mejoras y redactan documentos.</p></div>
-                                <div class="service-item"><h5 class="service-item-title">Automatización de Tareas Cognitivas</h5><p class="service-item-description">Automatización de tareas como resumen de videos, transcripción de audios y extracción de ideas clave.</p></div>
-                                <div class="service-item"><h5 class="service-item-title">Desarrollo de Asistentes Estratégicos</h5><p class="service-item-description">Asistentes para ideación, planeación estratégica y lluvia de ideas guiadas basados en prompts inteligentes.</p></div>
-                            </div>
-                        </div>
-                        <div>
-                             <h4 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-chart-line text-primary-gold"></i>Visualización, Análisis y Prototipado</h4>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                <div class="service-item"><h5 class="service-item-title">Generación de Gráficos Interactivos</h5><p class="service-item-description">Creación de gráficos interactivos a partir de datos sin necesidad de Excel o BI avanzado.</p></div>
-                                <div class="service-item"><h5 class="service-item-title">Desarrollo de Simuladores</h5><p class="service-item-description">Creación de simuladores a pequeña escala (operativos, financieros) para validar ideas.</p></div>
-                                <div class="service-item"><h5 class="service-item-title">Creación de Dashboards Rápidos</h5><p class="service-item-description">Creación de dashboards para indicadores clave usando herramientas low-code + IA.</p></div>
-                            </div>
-                        </div>
+                    <h3 class="service-category-title justify-center text-center">TECNOLOGÍA</h3>
+                    <div class="max-w-4xl mx-auto text-center">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">Implementamos soluciones tecnológicas accesibles, inteligentes y adaptadas al contexto para potenciar la productividad y resolver desafíos operativos concretos.</p>
+                        <p class="text-gray-600 mb-6">Desde el uso táctico de herramientas de IA en la rutina diaria, hasta proyectos ágiles con tecnologías no-code, low-code o integraciones específicas, ayudamos a que personas y empresas usen la tecnología con sentido, sin complejidad innecesaria.</p>
+                        <p class="text-xl font-semibold text-primary-teal font-display">Tecnología sin complicaciones. Soluciones con resultados.</p>
                     </div>
-                </div>
 
-                <div id="performance" class="service-panel hidden animate-fade-in">
-                    <h3 class="service-category-title justify-center text-center">3. DESEMPEÑO DE PROYECTOS Y EQUIPOS</h3>
-                    <div class="service-category-objective max-w-4xl mx-auto"><strong>Objetivo:</strong> Alinear equipos, proyectos y estrategia a través de metodologías ágiles, cultura de innovación y resultados visibles.</div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                        <div class="service-item"><h4 class="service-item-title"><i class="fas fa-project-diagram text-primary-gold"></i>Dirección de Proyectos de Transformación</h4><p class="service-item-description">Desde la estructuración hasta el seguimiento. Incluye roadmap, gestión de equipo y métricas de impacto.</p></div>
-                        <div class="service-item"><h4 class="service-item-title"><i class="fas fa-users-cog text-primary-gold"></i>Diseño de Equipos de Alto Rendimiento</h4><p class="service-item-description">Reclutamiento estratégico, definición de perfiles, plan de formación y cultura colaborativa.</p></div>
-                        <div class="service-item"><h4 class="service-item-title"><i class="fas fa-lightbulb text-primary-gold"></i>Consultoría en Innovación</h5><p class="service-item-description">Cómo escalar sin perder agilidad. Diseño de MVP, validación de soluciones y mejora continua.</p></div>
-                        <div class="service-item"><h4 class="service-item-title"><i class="fas fa-chalkboard-teacher text-primary-gold"></i>Conferencias y Talleres para Empresas</h4><p class="service-item-description">Desde talleres tipo "Innovation Day" hasta charlas para juntas directivas sobre visión tecnológica y cultura.</p></div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
+                        <div class="service-item bg-white shadow-lg">
+                            <h4 class="text-xl font-bold text-primary-teal mb-2">1. IA para Ciudadanos Digitales</h4>
+                            <p class="font-semibold text-gray-600 mb-4">Uso consciente y práctico de la IA en el día a día profesional.</p>
+                            <p class="service-item-description">Ayudamos a profesionales y empresas a aplicar IA generativa (ChatGPT, Gemini, etc.) para optimizar su trabajo sin necesidad de conocimientos técnicos. Diseñamos flujos para redacción, análisis, ideación y gestión del conocimiento.</p>
+                            <div class="mt-4 p-4 bg-teal-50 border-l-4 border-primary-gold rounded-r-lg">
+                                <strong class="text-dark-teal">Enfoque:</strong> Aplicabilidad diaria, individual y táctica.
+                            </div>
+                        </div>
+                        <div class="service-item bg-white shadow-lg">
+                            <h4 class="text-xl font-bold text-primary-teal mb-2">2. Proyectos Ágiles de Tecnología</h4>
+                            <p class="font-semibold text-gray-600 mb-4">Soluciones concretas para flujos que los grandes sistemas no han resuelto.</p>
+                            <p class="service-item-description">Diseñamos proyectos con herramientas no-code, low-code e IA para resolver cuellos de botella específicos donde ERPs o CRMs no llegan. Acompañamos desde la detección del problema hasta la entrega funcional y validada.</p>
+                             <div class="mt-4 p-4 bg-teal-50 border-l-4 border-primary-gold rounded-r-lg">
+                                <strong class="text-dark-teal">Enfoque:</strong> Resolver rápido, con tecnología simple y adaptable.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -364,11 +381,36 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contact-form" action="https://formspree.io/f/xpwrgwoa" method="POST">
+                    <form id="contact-form" action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST">
                         <div class="form-group"><label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nombre Completo</label><input type="text" id="name" name="name" required class="form-control" placeholder="Tu nombre"></div>
                         <div class="form-group"><label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label><input type="email" id="email" name="email" required class="form-control" placeholder="tu@email.com"></div>
                         <div class="form-group"><label for="company" class="block text-sm font-medium text-gray-700 mb-2">Empresa (Opcional)</label><input type="text" id="company" name="company" class="form-control" placeholder="Nombre de tu empresa"></div>
-                        <div class="form-group"><fieldset><legend class="block text-sm font-medium text-gray-700 mb-3">Servicios de Interés (puedes marcar varios)</legend><div class="space-y-4"><div class="space-y-2"><div class="flex items-center"><input id="s-mind-1" name="servicios[]" type="checkbox" value="Taller Alto Rendimiento" class="form-checkbox"><label for="s-mind-1" class="ml-3 block text-sm text-gray-600 checkbox-label">Taller de Alto Rendimiento</label></div><div class="flex items-center"><input id="s-mind-2" name="servicios[]" type="checkbox" value="Taller Intensivo Mentalidad Digital" class="form-checkbox"><label for="s-mind-2" class="ml-3 block text-sm text-gray-600 checkbox-label">Taller Intensivo de Mentalidad Digital</label></div><div class="flex items-center"><input id="s-tech-1" name="servicios[]" type="checkbox" value="Implementacion IA" class="form-checkbox"><label for="s-tech-1" class="ml-3 block text-sm text-gray-600 checkbox-label">Implementación de IA</label></div><div class="flex items-center"><input id="s-perf-1" name="servicios[]" type="checkbox" value="Direccion de Proyectos" class="form-checkbox"><label for="s-perf-1" class="ml-3 block text-sm text-gray-600 checkbox-label">Dirección de Proyectos de Transformación</label></div><div class="flex items-center"><input id="s-other" name="servicios[]" type="checkbox" value="Otro" class="form-checkbox"><label for="s-other" class="ml-3 block text-sm text-gray-600 checkbox-label">Otro / No estoy seguro</label></div></div></div></fieldset></div>
+                        
+                        <!-- FORMULARIO DE SERVICIOS ACTUALIZADO -->
+                        <div class="form-group">
+                            <fieldset>
+                                <legend class="block text-sm font-medium text-gray-700 mb-3">Servicios de Interés (puedes marcar varios)</legend>
+                                <div class="space-y-3">
+                                    <div class="flex items-center">
+                                        <input id="s-mentalidad" name="servicios[]" type="checkbox" value="Mentalidad - Desarrollo de Ciudadanos Digitales" class="form-checkbox">
+                                        <label for="s-mentalidad" class="ml-3 block text-sm text-gray-600 checkbox-label">Mentalidad (Desarrollo de Ciudadanos Digitales)</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input id="s-ia-diaria" name="servicios[]" type="checkbox" value="Tecnología - IA para Ciudadanos Digitales" class="form-checkbox">
+                                        <label for="s-ia-diaria" class="ml-3 block text-sm text-gray-600 checkbox-label">Tecnología (IA para Ciudadanos Digitales)</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input id="s-proyectos-agiles" name="servicios[]" type="checkbox" value="Tecnología - Proyectos Ágiles" class="form-checkbox">
+                                        <label for="s-proyectos-agiles" class="ml-3 block text-sm text-gray-600 checkbox-label">Tecnología (Proyectos Ágiles)</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input id="s-otro" name="servicios[]" type="checkbox" value="Otro" class="form-checkbox">
+                                        <label for="s-otro" class="ml-3 block text-sm text-gray-600 checkbox-label">Otro / No estoy seguro</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        
                         <div class="form-group"><label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label><textarea id="message" name="message" rows="4" required class="form-control" placeholder="Cuéntame más sobre tu proyecto o tus necesidades..."></textarea></div>
                         <button type="submit" class="btn btn-primary w-full"><i class="fas fa-paper-plane mr-2"></i>Enviar Mensaje</button>
                     </form>
