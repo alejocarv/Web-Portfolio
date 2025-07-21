@@ -60,20 +60,9 @@
         .section-title { font-size: 2.5rem; font-weight: 700; color: var(--primary-teal); margin-bottom: 20px; font-family: 'Playfair Display', serif; }
         .section-subtitle { font-size: 1.2rem; color: #666; margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto; }
         .service-category-title { font-size: 2rem; font-weight: 700; color: var(--primary-teal); margin-bottom: 15px; font-family: 'Playfair Display', serif; display: flex; align-items: center; gap: 15px; }
-        .service-category-objective { font-size: 1.1rem; color: #666; margin-bottom: 30px; padding: 20px; background: rgba(27, 77, 92, 0.05); border-radius: 10px; border-left: 4px solid var(--primary-gold); }
-        .service-item { background: var(--bg-light); border-radius: 15px; padding: 25px; border: 1px solid rgba(27, 77, 92, 0.1); transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; }
-        .service-item:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(27, 77, 92, 0.1); }
-        .service-item-title { font-size: 1.3rem; font-weight: 600; color: var(--primary-teal); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-        .service-item-description { color: #666; line-height: 1.6; flex-grow: 1; }
         .quote-section { background: linear-gradient(135deg, var(--primary-teal) 0%, var(--dark-teal) 100%); color: var(--text-light); padding: 60px 0; text-align: center; }
         .quote-text { font-size: 1.5rem; font-style: italic; margin-bottom: 20px; font-family: 'Playfair Display', serif; }
         .quote-author { font-size: 1.1rem; opacity: 0.9; }
-        .bonus-section { background: linear-gradient(135deg, var(--primary-gold) 0%, var(--accent-gold) 100%); color: var(--text-dark); padding: 40px; border-radius: 20px; }
-        .bonus-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-        .format-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
-        .format-item { background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 10px; display: flex; align-items: center; gap: 15px; }
-        .animate-fade-in { animation: fadeIn 0.5s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         
         .tab-btn { background-color: var(--bg-light); color: var(--primary-teal); border: 2px solid var(--primary-teal); }
         .tab-btn.active { background: var(--primary-teal); color: var(--text-light); border-color: var(--primary-teal); box-shadow: 0 4px 15px rgba(27, 77, 92, 0.2); }
@@ -81,6 +70,117 @@
         .form-checkbox { height: 1.25rem; width: 1.25rem; border-radius: 0.25rem; border-color: rgba(27, 77, 92, 0.2); color: var(--primary-teal); transition: all 0.2s ease; cursor: pointer; }
         .form-checkbox:focus { --tw-ring-color: rgba(27, 77, 92, 0.3); border-color: var(--primary-teal); }
         .checkbox-label { cursor: pointer; }
+        
+        /* --- ESTILOS MEJORADOS PARA FLUJO DE TRABAJO --- */
+        .workflow-section {
+            background-color: transparent; /* El fondo ya está en la sección padre */
+            padding: 40px 0;
+            margin-top: 40px;
+            border-radius: 20px;
+        }
+        .workflow-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-teal);
+            font-family: 'Playfair Display', serif;
+            justify-content: center;
+            text-align: center;
+        }
+        .workflow-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark-teal);
+            margin-bottom: 60px;
+            font-family: 'Playfair Display', serif;
+        }
+        .timeline-process-container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        .timeline-process-container::before {
+            content: '';
+            position: absolute;
+            top: 40px; /* Alineado al centro de los iconos */
+            left: 5%;
+            right: 5%;
+            height: 4px;
+            background-color: var(--primary-teal);
+            opacity: 0.2;
+            z-index: 0;
+        }
+        .timeline-process-step {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+        }
+        .step-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--bg-light);
+            border: 4px solid var(--primary-teal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .step-icon {
+            font-size: 2rem;
+            color: var(--primary-teal);
+            transition: color 0.3s ease;
+        }
+        .step-number {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 30px;
+            height: 30px;
+            background: var(--primary-gold);
+            color: var(--dark-teal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            border: 2px solid var(--bg-light);
+        }
+        .step-content {
+            margin-top: 20px;
+        }
+        .step-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .step-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+        .timeline-process-step:hover .step-icon-wrapper {
+            transform: scale(1.1);
+            background-color: var(--primary-teal);
+            border-color: var(--primary-gold);
+        }
+        .timeline-process-step:hover .step-icon {
+            color: var(--text-light);
+        }
+
+        /* --- FIN ESTILOS MEJORADOS --- */
 
         @media (max-width: 768px) {
             .section-padding { padding: 60px 0; }
@@ -89,6 +189,45 @@
             .section-title { font-size: 2rem; }
             .contact-form { padding: 30px; }
             .profile-image { width: 200px; height: 200px; }
+
+            /* --- ESTILOS RESPONSIVE PARA FLUJO DE TRABAJO --- */
+            .workflow-section { padding: 30px 0; }
+            .workflow-title { font-size: 1.5rem; }
+            .timeline-process-container {
+                flex-direction: column;
+                align-items: flex-start; /* Alinea los items a la izquierda */
+            }
+            .timeline-process-container::before {
+                /* Convierte la línea a vertical */
+                top: 5%;
+                bottom: 5%;
+                left: 40px; /* Corresponde al centro del icono */
+                width: 4px;
+                right: auto;
+            }
+            .timeline-process-step {
+                flex-direction: row; /* Icono al lado del texto */
+                align-items: flex-start;
+                text-align: left;
+                width: 100%;
+                margin-bottom: 30px;
+                padding: 0;
+            }
+            .timeline-process-step:last-child {
+                margin-bottom: 0;
+            }
+            .step-icon-wrapper {
+                flex-shrink: 0; /* Evita que el icono se encoja */
+            }
+            .step-content {
+                margin-top: 5px;
+                margin-left: 20px;
+            }
+             .step-number {
+                top: -10px;
+                right: -10px;
+            }
+            /* --- FIN ESTILOS RESPONSIVE --- */
         }
 
         /* --- ESTILOS PARA BOTÓN FLOTANTE DE WHATSAPP --- */
@@ -98,7 +237,7 @@
             height: 60px;
             bottom: 40px;
             right: 40px;
-            background-color: #25D366; /* Color oficial de WhatsApp */
+            background-color: #25D366;
             color: #FFF;
             border-radius: 50px;
             text-align: center;
@@ -110,7 +249,6 @@
             justify-content: center;
             transition: transform 0.3s ease;
         }
-
         .whatsapp-float:hover {
             transform: scale(1.1);
         }
@@ -276,42 +414,66 @@
             </div>
 
             <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-12" id="service-tabs">
-                <button class="btn tab-btn active" data-tab="mindset"><i class="fas fa-brain mr-2"></i> MENTALIDAD</button>
-                <button class="btn tab-btn" data-tab="tech"><i class="fas fa-microchip mr-2"></i> TECNOLOGÍA</button>
+                <button class="btn tab-btn active" data-tab="mindset"><i class="fas fa-lightbulb mr-2"></i> MENTALIDAD</button>
+                <button class="btn tab-btn" data-tab="tech"><i class="fas fa-cogs mr-2"></i> TECNOLOGÍA</button>
             </div>
 
             <div id="service-content">
                 <!-- Panel MENTALIDAD -->
                 <div id="mindset" class="service-panel animate-fade-in">
-                    <h3 class="service-category-title justify-center text-center">MENTALIDAD</h3>
-                    <div class="max-w-4xl mx-auto text-center">
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">Empoderamos a profesionales y empresas en el desarrollo de <strong>ciudadanos digitales</strong>, personas capaces de identificar oportunidades de digitalización u optimización de procesos operativos en su entorno.</p>
-                        <p class="text-gray-600">A través del fortalecimiento de la <strong>habilidad digital estratégica</strong>, ayudamos a que cada persona utilice la tecnología de forma consciente y efectiva, generando un impacto directo en indicadores como:</p>
-                    </div>
+                    <h3 class="service-category-title justify-center text-center">Programa de Desarrollo de Ciudadanos Digitales</h3>
+                    <p class="text-center font-semibold text-primary-teal text-lg max-w-3xl mx-auto">Transforma a tu equipo con una mentalidad digital estratégica y el uso práctico de la IA.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                        <!-- DIAGNÓSTICO -->
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary-gold">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary-teal"><i class="fas fa-search mr-3 fa-fw"></i>1. Descubre tu Potencial (Diagnóstico)</h4>
+                            <p class="text-gray-700 leading-relaxed">Todo comienza con una conversación profunda y un análisis de tus necesidades. Identificaremos juntos los desafíos y objetivos específicos de tu equipo o empresa para asegurar que el programa se adapte a tu realidad.</p>
+                            <ul class="space-y-2 text-gray-600 list-disc list-inside mt-3">
+                                <li>Auditoría rápida de madurez digital.</li>
+                                <li>Identificación de cuellos de botella y oportunidades.</li>
+                                <li>Definición de metas claras para la formación.</li>
+                            </ul>
+                        </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                        <!-- FORMACIÓN Y CAPACITACIÓN -->
                         <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary-teal">
+                            <h4 class="font-bold text-xl mb-3 flex items-center text-primary-teal"><i class="fas fa-chalkboard-teacher mr-3 fa-fw"></i>2. Formación y Capacitación a Medida</h4>
+                            <p class="text-gray-700 leading-relaxed">Nuestro programa fortalece la <strong>habilidad digital </strong> y te capacita en el uso práctico y consciente de la <strong>IA generativa</strong> (ChatGPT, Gemini, Claude) para tu día a día profesional.</p>
+                            <h5 class="font-bold text-lg mt-4 mb-2 text-primary-teal">Formatos Flexibles:</h5>
+                            <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                                <li>Workshops Intensivos (presencial u online).</li>
+                                <li>Paquetes de horas de consultoría y seguimiento.</li>
+                                <li>Conferencias y Charlas Inspiradoras.</li>
+                                <li>Programas híbridos (formación + implementación).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h4 class="text-2xl font-bold mt-12 text-center text-primary-teal font-display">Impacto Medible en tu Negocio</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+                        <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-primary-teal">
                             <h4 class="font-bold text-xl mb-4 flex items-center text-primary-teal"><i class="fas fa-chart-line mr-3 fa-fw"></i>Eficiencia Operativa</h4>
                             <ul class="space-y-3 text-gray-600 list-disc list-inside">
-                                <li><strong>Tiempo por tarea:</strong> Reducción en la ejecución.</li>
-                                <li><strong>Productividad de equipo:</strong> Aumento en tareas completadas.</li>
-                                <li><strong>Tiempo de respuesta:</strong> Mejora en atención al cliente.</li>
+                                <li>Reducción en tiempo de ejecución de tareas.</li>
+                                <li>Aumento de productividad por equipo.</li>
+                                <li>Mejora en tiempos de respuesta.</li>
                             </ul>
                         </div>
-                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary-gold">
+                        <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-primary-gold">
                             <h4 class="font-bold text-xl mb-4 flex items-center text-primary-teal"><i class="fas fa-dollar-sign mr-3 fa-fw"></i>Financieros</h4>
                             <ul class="space-y-3 text-gray-600 list-disc list-inside">
-                                <li><strong>Reducción de costos:</strong> Menos gastos en tareas manuales.</li>
-                                <li><strong>ROI tecnológico:</strong> Retorno de la inversión de herramientas.</li>
-                                <li><strong>Ingresos por eficiencia:</strong> Mejoras en el ciclo comercial.</li>
+                                <li>Reducción de costos operativos.</li>
+                                <li>Aumento del ROI de herramientas tecnológicas.</li>
+                                <li>Incremento de ingresos por eficiencia.</li>
                             </ul>
                         </div>
-                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-light-teal">
+                        <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-light-teal">
                             <h4 class="font-bold text-xl mb-4 flex items-center text-primary-teal"><i class="fas fa-users-cog mr-3 fa-fw"></i>Organización y Cultura</h4>
                             <ul class="space-y-3 text-gray-600 list-disc list-inside">
-                                <li><strong>Adopción tecnológica:</strong> % de colaboradores usando herramientas.</li>
-                                <li><strong>Índice de mejora:</strong> Nº de propuestas generadas.</li>
-                                <li><strong>Autonomía digital:</strong> Capacidad del equipo para resolver retos.</li>
+                                <li>Mayor adopción tecnológica.</li>
+                                <li>Aumento de propuestas de mejora interna.</li>
+                                <li>Mayor autonomía digital del equipo.</li>
                             </ul>
                         </div>
                     </div>
@@ -319,43 +481,120 @@
 
                 <!-- Panel TECNOLOGÍA -->
                 <div id="tech" class="service-panel hidden animate-fade-in">
-                    <h3 class="service-category-title justify-center text-center">TECNOLOGÍA</h3>
-                    <div class="max-w-4xl mx-auto text-center">
+                    <h3 class="service-category-title justify-center text-center">Proyectos Ágiles de Tecnología</h3>
+                     <div class="max-w-4xl mx-auto text-center">
                         <p class="text-lg text-gray-700 leading-relaxed mb-4">Implementamos soluciones tecnológicas accesibles, inteligentes y adaptadas al contexto para potenciar la productividad y resolver desafíos operativos concretos.</p>
-                        <p class="text-gray-600 mb-6">Desde el uso táctico de herramientas de IA en la rutina diaria, hasta proyectos ágiles con tecnologías no-code, low-code o integraciones específicas, ayudamos a que personas y empresas usen la tecnología con sentido, sin complejidad innecesaria.</p>
                         <p class="text-xl font-semibold text-primary-teal font-display">Tecnología sin complicaciones. Soluciones con resultados.</p>
                     </div>
 
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
-                        <div class="service-item bg-white shadow-lg">
-                            <h4 class="text-xl font-bold text-primary-teal mb-2">1. IA para Ciudadanos Digitales</h4>
-                            <p class="font-semibold text-gray-600 mb-4">Uso consciente y práctico de la IA en el día a día profesional.</p>
-                            <p class="service-item-description">Ayudamos a profesionales y empresas a aplicar IA generativa (ChatGPT, Gemini, etc.) para optimizar su trabajo sin necesidad de conocimientos técnicos. Diseñamos flujos para redacción, análisis, ideación y gestión del conocimiento.</p>
-                            <div class="mt-4 p-4 bg-teal-50 border-l-4 border-primary-gold rounded-r-lg">
-                                <strong class="text-dark-teal">Enfoque:</strong> Aplicabilidad diaria, individual y táctica.
-                            </div>
-                        </div>
-                        <div class="service-item bg-white shadow-lg">
-                            <h4 class="text-xl font-bold text-primary-teal mb-2">2. Proyectos Ágiles de Tecnología</h4>
-                            <p class="font-semibold text-gray-600 mb-4">Soluciones concretas para flujos que los grandes sistemas no han resuelto.</p>
-                            <p class="service-item-description">Diseñamos proyectos con herramientas no-code, low-code e IA para resolver cuellos de botella específicos donde ERPs o CRMs no llegan. Acompañamos desde la detección del problema hasta la entrega funcional y validada.</p>
-                             <div class="mt-4 p-4 bg-teal-50 border-l-4 border-primary-gold rounded-r-lg">
-                                <strong class="text-dark-teal">Enfoque:</strong> Resolver rápido, con tecnología simple y adaptable.
-                            </div>
+                    <div class="mt-8 max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold text-primary-teal mb-2">Soluciones concretas para flujos que los grandes sistemas no han resuelto.</h4>
+                        <p class="text-gray-700">Diseñamos e implementamos proyectos ágiles que aprovechan herramientas no-code, low-code e IA para resolver cuellos de botella específicos en procesos internos, donde los grandes sistemas (como ERP o CRMs) no llegan.</p>
+                        <p class="text-gray-700 mt-4">Acompañamos desde la detección del problema hasta la validación y entrega funcional, con prototipos, simuladores o integraciones que generan impacto operativo sin necesidad de desarrollos costosos.</p>
+                         <div class="mt-6 p-4 bg-teal-50 border-l-4 border-primary-gold rounded-r-lg">
+                            <strong class="text-dark-teal">Enfoque:</strong> Resolver rápido, con tecnología simple y adaptable.
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="bonus-section mt-12 max-w-4xl mx-auto">
-                <h3 class="bonus-title"><i class="fas fa-gift"></i>FORMATOS DE ENTREGA FLEXIBLES</h3>
-                <div class="format-list">
-                    <div class="format-item"><i class="fas fa-clock text-dark-teal text-xl"></i><div><span class="font-semibold">Workshops intensivos</span><span class="block text-sm opacity-80">(presencial u online)</span></div></div>
-                    <div class="format-item"><i class="fas fa-calendar-alt text-dark-teal text-xl"></i><div><span class="font-semibold">Procesos 1 a 3 meses</span><span class="block text-sm opacity-80">(acompañamiento ejecutivo)</span></div></div>
-                    <div class="format-item"><i class="fas fa-bolt text-dark-teal text-xl"></i><div><span class="font-semibold">Mentorías express</span><span class="block text-sm opacity-80">(por horas o sprint)</span></div></div>
-                    <div class="format-item"><i class="fas fa-layer-group text-dark-teal text-xl"></i><div><span class="font-semibold">Programas híbridos</span><span class="block text-sm opacity-80">(formación + implementación)</span></div></div>
+            <!-- INICIO DE LA NUEVA SECCIÓN DE FLUJO DE TRABAJO -->
+            <div class="workflow-section">
+                <h3 class="workflow-title"><i class="fas fa-project-diagram mr-2"></i> Nuestro Flujo de Trabajo</h3>
+                
+                <!-- Flujo para Mentalidad -->
+                <div id="flow-mentalidad" class="process-flow-panel animate-fade-in">
+                    <h4 class="workflow-subtitle">Para el Programa de Ciudadanos Digitales</h4>
+                    <div class="timeline-process-container">
+                        <!-- Step 1 -->
+                        <div class="timeline-process-step">
+                            <div class="step-icon-wrapper">
+                                <i class="fas fa-search step-icon"></i>
+                                <div class="step-number">1</div>
+                            </div>
+                            <div class="step-content">
+                                <h5 class="step-title">Diagnóstico Personalizado</h5>
+                                <p class="step-description">Entendemos a fondo tus necesidades y objetivos actuales.</p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="timeline-process-step">
+                            <div class="step-icon-wrapper">
+                                <i class="fas fa-chalkboard-teacher step-icon"></i>
+                                <div class="step-number">2</div>
+                            </div>
+                            <div class="step-content">
+                                <h5 class="step-title">Diseño y Capacitación</h5>
+                                <p class="step-description">Creamos un programa a medida e implementamos la formación.</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="timeline-process-step">
+                            <div class="step-icon-wrapper">
+                                <i class="fas fa-chart-pie step-icon"></i>
+                                <div class="step-number">3</div>
+                            </div>
+                            <div class="step-content">
+                                <h5 class="step-title">Seguimiento y Medición</h5>
+                                <p class="step-description">Evaluamos el impacto y aseguramos la adopción del conocimiento.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flujo para Tecnología -->
+                <div id="flow-tech" class="process-flow-panel hidden animate-fade-in">
+                    <h4 class="workflow-subtitle">Para Proyectos Ágiles de Tecnología</h4>
+                    <div class="timeline-process-container">
+                        <!-- Step 1 -->
+                        <div class="timeline-process-step">
+                            <div class="step-icon-wrapper">
+                                <i class="fas fa-comments step-icon"></i>
+                                <div class="step-number">1</div>
+                            </div>
+                            <div class="step-content">
+                                <h5 class="step-title">Diagnóstico Inicial</h5>
+                                <p class="step-description">Analizamos tu problema y definimos los requisitos del proyecto.</p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="timeline-process-step">
+                            <div class="step-icon-wrapper">
+                                <i class="fas fa-file-signature step-icon"></i>
+                                <div class="step-number">2</div>
+                            </div>
+                            <div class="step-content">
+                                <h5 class="step-title">Propuesta y Cotización</h5>
+                                <p class="step-description">Presentamos una solución detallada y el presupuesto del proyecto.</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="timeline-process-step">
+                            <div class="step-icon-wrapper">
+                                <i class="fas fa-cogs step-icon"></i>
+                                <div class="step-number">3</div>
+                            </div>
+                            <div class="step-content">
+                                <h5 class="step-title">Implementación Ágil</h5>
+                                <p class="step-description">Desarrollamos y desplegamos la solución de forma iterativa.</p>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="timeline-process-step">
+                            <div class="step-icon-wrapper">
+                                <i class="fas fa-check-circle step-icon"></i>
+                                <div class="step-number">4</div>
+                            </div>
+                            <div class="step-content">
+                                <h5 class="step-title">Soporte y Cierre</h5>
+                                <p class="step-description">Aseguramos la funcionalidad y realizamos la entrega final.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!-- FIN DE LA NUEVA SECCIÓN -->
+
         </div>
     </section>
 
@@ -381,7 +620,7 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contact-form" action="https://formspree.io/f/xpwrgwoa" method="POST">
+                    <form id="contact-form" action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST">
                         <div class="form-group"><label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nombre Completo</label><input type="text" id="name" name="name" required class="form-control" placeholder="Tu nombre"></div>
                         <div class="form-group"><label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label><input type="email" id="email" name="email" required class="form-control" placeholder="tu@email.com"></div>
                         <div class="form-group"><label for="company" class="block text-sm font-medium text-gray-700 mb-2">Empresa (Opcional)</label><input type="text" id="company" name="company" class="form-control" placeholder="Nombre de tu empresa"></div>
@@ -392,16 +631,12 @@
                                 <legend class="block text-sm font-medium text-gray-700 mb-3">Servicios de Interés (puedes marcar varios)</legend>
                                 <div class="space-y-3">
                                     <div class="flex items-center">
-                                        <input id="s-mentalidad" name="servicios[]" type="checkbox" value="Mentalidad - Desarrollo de Ciudadanos Digitales" class="form-checkbox">
-                                        <label for="s-mentalidad" class="ml-3 block text-sm text-gray-600 checkbox-label">Mentalidad (Desarrollo de Ciudadanos Digitales)</label>
+                                        <input id="s-mentalidad" name="servicios[]" type="checkbox" value="Programa de Desarrollo de Ciudadanos Digitales (Mentalidad + IA)" class="form-checkbox">
+                                        <label for="s-mentalidad" class="ml-3 block text-sm text-gray-600 checkbox-label">Programa de Desarrollo de Ciudadanos Digitales (Mentalidad + IA)</label>
                                     </div>
                                     <div class="flex items-center">
-                                        <input id="s-ia-diaria" name="servicios[]" type="checkbox" value="Tecnología - IA para Ciudadanos Digitales" class="form-checkbox">
-                                        <label for="s-ia-diaria" class="ml-3 block text-sm text-gray-600 checkbox-label">Tecnología (IA para Ciudadanos Digitales)</label>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <input id="s-proyectos-agiles" name="servicios[]" type="checkbox" value="Tecnología - Proyectos Ágiles" class="form-checkbox">
-                                        <label for="s-proyectos-agiles" class="ml-3 block text-sm text-gray-600 checkbox-label">Tecnología (Proyectos Ágiles)</label>
+                                        <input id="s-proyectos-agiles" name="servicios[]" type="checkbox" value="Proyectos Ágiles de Tecnología" class="form-checkbox">
+                                        <label for="s-proyectos-agiles" class="ml-3 block text-sm text-gray-600 checkbox-label">Proyectos Ágiles de Tecnología</label>
                                     </div>
                                     <div class="flex items-center">
                                         <input id="s-otro" name="servicios[]" type="checkbox" value="Otro" class="form-checkbox">
@@ -440,7 +675,69 @@
     </a>
 
     <script>
-        window.addEventListener('scroll',function(){const e=document.querySelector('.navbar');window.scrollY>50?e.classList.add('scrolled'):e.classList.remove('scrolled')});const tabButtons=document.querySelectorAll('.tab-btn'),tabPanels=document.querySelectorAll('.service-panel');tabButtons.forEach(e=>{e.addEventListener('click',()=>{const t=e.dataset.tab;tabButtons.forEach(e=>e.classList.remove('active')),e.classList.add('active'),tabPanels.forEach(e=>{e.classList.toggle('hidden',e.id!==t)})})});const mobileMenuButton=document.getElementById('mobile-menu-button'),mobileMenu=document.getElementById('mobile-menu'),navLinks=mobileMenu.querySelectorAll('a');mobileMenuButton.addEventListener('click',()=>{mobileMenu.classList.toggle('hidden')}),navLinks.forEach(e=>{e.addEventListener('click',()=>{mobileMenu.classList.add('hidden')})});
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // SCRIPT PARA PESTAÑAS DE SERVICIOS Y FLUJO DE TRABAJO ASOCIADO
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const servicePanels = document.querySelectorAll('.service-panel');
+        const flowPanels = document.querySelectorAll('.process-flow-panel');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.dataset.tab;
+
+                // Actualizar botones de pestaña
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Actualizar paneles de servicio
+                servicePanels.forEach(panel => {
+                    panel.classList.toggle('hidden', panel.id !== targetTab);
+                });
+
+                // Actualizar paneles de flujo de trabajo
+                flowPanels.forEach(panel => {
+                    panel.classList.toggle('hidden', panel.id !== `flow-${targetTab}`);
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
     </script>
 </body>
 </html>
